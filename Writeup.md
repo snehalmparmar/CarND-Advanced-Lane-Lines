@@ -187,6 +187,7 @@ The radius of curvature and the position of the vehicle are computed in the `mea
 ```
 
 These values are used to compute the polynomial coefficients in meters in order to compute the radius of curvature with [this formula](https://www.intmath.com/applications-differentiation/8-radius-curvature.php), and the vehicle position assuming that the camera is centered in the car:
+```python
     left_fit_converted = np.polyfit(lefty*ym_per_pix, leftx*xm_per_pix, 2)
     right_fit_converted = np.polyfit(righty*ym_per_pix, rightx*xm_per_pix, 2)
 

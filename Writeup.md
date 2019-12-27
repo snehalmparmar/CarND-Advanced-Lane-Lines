@@ -70,7 +70,7 @@ For each chessboard image, taken from different angles with the same camera, we 
 I then used the output `objpoints` and `imgpoints` to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function:
 
 ```python
-retval, mtx, dist_coeff, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, img.shape[1::-1], None, None)
+ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, img.shape[1::-1], None, None)
 ```
 
 Below, you can see the detected corners drawn on each chessboard image:
